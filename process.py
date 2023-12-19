@@ -15,6 +15,11 @@ if platform == "win32":
     slash = "\\"
     poppler = "poppler{0}Library{0}bin".format(slash)
 
+if os.path.isdir("image_here") == False:
+    os.mkdir("image_here")
+if os.path.isdir("doc_here") == False:
+    os.mkdir("doc_here")
+
 print("===========================================")
 print("+                                         +")
 print("+           PDFs to images ...            +")

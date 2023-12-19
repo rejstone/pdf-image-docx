@@ -8,6 +8,8 @@ echo ===========================================
 echo:
 echo:
 echo:
+python -m venv .env
+call .\.env\Scripts\activate.bat
 echo PLEASE WAIT! PROCESSING ...
 python -m pip install -r requirements.txt
 python process.py
@@ -20,5 +22,6 @@ echo +        Your process is finished         +
 echo +        Check data into doc_here         +
 echo +                                         +
 echo ===========================================
+call .\.env\Scripts\deactivate.bat
 
 pause
